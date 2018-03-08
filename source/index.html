@@ -23,60 +23,11 @@
 
   <template>
 
-    <article class="card card_size_s">
-      <h3 class="card__title"></h3>
-      <div class="card__description"></div>
-      <div class="card__wrapper">
-        <picture>
-          <source media="(min-width: 1536px)" src="">
-          <source media="(min-width: 1024px)" src="">
-          <img class="card__image" src="112" width="90" alt="">
-        </picture>
-        <cite class="card__author"></cite>
-        <button class="info">
-          <span class="visually-hidden">Информация</span>
-        </button>
-        <button class="laik">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-      </div>
-    </article>
+    <include src="source/components/cards/card_size_s.html"></include>
 
-    <article class="card card_size_m">
-      <h3 class="card__title"></h3>
-      <picture>
-        <source media="(min-width: 1536px)" src="">
-        <source media="(min-width: 1024px)" src="">
-        <img class="card__image" src="172" width="90" alt="">
-      </picture>
-      <div class="card__wrapper">
-        <div class="card__description"></div>
-        <button class="info">
-          <span class="visually-hidden">Информация</span>
-        </button>
-        <button class="laik">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-      </div>
-    </article>
+    <include src="source/components/cards/card_size_m.html"></include>
 
-    <article class="card card_size_l">
-      <picture>
-        <source media="(min-width: 1536px)" src="">
-        <source media="(min-width: 1024px)" src="">
-        <img class="card__image" src="172" width="90" alt="">
-      </picture>
-      <div class="card__wrapper">
-        <h3 class="card__title"></h3>
-        <div class="card__description"></div>
-        <button class="info">
-          <span class="visually-hidden">Информация</span>
-        </button>
-        <button class="laik">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-      </div>
-    </article>
+    <include src="source/components/cards/card_size_l.html"></include>
 
   </template>
 
