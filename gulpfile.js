@@ -51,6 +51,7 @@ gulp.task("style", function() {
 gulp.task("script", function () {
   return gulp.src("source/js/**/*.js")
     .pipe(plumber())
+    .pipe(gulp.dest("build/js"))
     .pipe(jsmin())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"))
@@ -99,6 +100,8 @@ gulp.task("serve", function() {
   gulp.watch("source/*.html", ["html"]);
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/js/**/*.js", ["script"]);
+  gulp.watch("source/img/**/*", ["images", "webp"]);
+  gulp.watch("source/fonts/*.{woff,woff2}", ["fonts"]);
 });
 
 gulp.task("clean", function () {
