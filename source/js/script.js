@@ -1,6 +1,7 @@
 (function () {
   var templates = document.querySelector("template").content;
-  var cardSmall = templates.querySelector(".card_size_s");
+  var cardSmallWithImage = templates.querySelector(".card_size_s.card_content_image");
+  var cardSmallWithText = templates.querySelector(".card_size_s.card_content_text");
   var cardMiddle = templates.querySelector(".card_size_m");
   var cardLarge = templates.querySelector(".card_size_l");
   var container = document.querySelector(".page__container");
@@ -12,13 +13,10 @@
 
     switch(articleData.size) {
       case "s":
-        origin = cardSmall.cloneNode(true);
         if (articleData.image) {
-          var description = origin.querySelector(".card__description");
-          description.parentNode.removeChild(description);
+          origin = cardSmallWithImage.cloneNode(true);
         } else if (articleData.description) {
-          var image = origin.querySelector(".card__picture");
-          image.parentNode.removeChild(image);
+          origin = cardSmallWithText.cloneNode(true);
         };
         break
       case "m":
@@ -34,8 +32,9 @@
     var title = origin.querySelector(".card__title");
     var image = origin.querySelector(".card__picture");
     var description = origin.querySelector(".card__description");
+    var author = origin.querySelector(".card__author");
 
-    title.innerHTML = articleData.title;
+    title.textContent = articleData.title;
     title.style.color = articleData.titleColor;
     if (image) {
       var src = articleData.image.slice(0, articleData.image.length - 4);
@@ -49,6 +48,9 @@
     };
     if (description) {
       description.innerHTML = articleData.description;
+    };
+    if (author) {
+      author.textContent = articleData.channelName;
     };
 
     return origin;

@@ -1,0 +1,153 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &_size_s {
+    grid-column: span 2;
+    height: 235px;
+  }
+
+  &_size_m {
+    grid-column: span 3;
+    height: 305px;
+  }
+
+  &_size_l {
+    grid-column: span 6;
+    flex-direction: row;
+    height: 245px;
+  }
+}
+
+.card__wrapper {
+  position: relative;
+}
+
+.card_size_s .card__wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.card__title {
+  flex-shrink: 0;
+  max-height: 3.6em;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 19px;
+  overflow: hidden;
+}
+
+.card_size_s .card__title {
+  font-size: 17px;
+}
+
+.card_size_l .card__title {
+  height: 2.5em;
+}
+
+.card__picture {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+}
+
+.card_size_m .card__picture {
+  margin-bottom: 10px;
+}
+
+.card_size_l .card__picture {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.card__picture img {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card__description {
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 1.43;
+  overflow: hidden;
+}
+
+.card_size_m .card__description {
+  height: 4.3em;
+  padding-right: 48px;
+}
+
+.card_size_l .card__description {
+  flex-shrink: 1;
+  height: 11.5em;
+  margin-bottom: auto;
+}
+
+.card__buttons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.card_size_s .card__buttons {
+  padding: 15px 0;
+}
+
+.card__author {
+  margin-right: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.card__action,
+.card__laik {
+  position: absolute;
+  right: 5px;
+}
+
+.card__author ~ .card__action,
+.card__author ~ .card__laik {
+  position: static;
+  margin: 0 5px;
+}
+
+.card_size_s .card__action {
+  top: 5px;
+}
+
+.card_size_s .card__laik {
+  bottom: 10px;
+}
+
+.card_size_m .card__action {
+  top: 0;
+  right: 0;
+}
+
+.card_size_m .card__laik {
+  right: 0;
+  bottom: 0;
+}
+
+.card_size_l .card__action {
+  position: static;
+  margin-right: auto;
+}
+
+.card_size_l .card__laik {
+  position: static;
+}
