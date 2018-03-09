@@ -1,0 +1,14 @@
+.laik {
+  @include button-reset;
+  width: 25px;
+  height: 20px;
+  background-image: url("../img/heart.png");
+  background-size: 17px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  outline-color: $grey;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
