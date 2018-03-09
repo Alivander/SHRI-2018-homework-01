@@ -3,9 +3,12 @@
   <div class="card__description"></div>
   <div class="card__wrapper">
     <picture>
-      <source media="(min-width: 1536px)" src="">
-      <source media="(min-width: 1024px)" src="">
-      <img class="card__image" width="112" height="90">
+      <source class="card__image_webp card__image_webp_l" media="(min-width: 1056px)" srcset="" type="image/webp">
+      <source class="card__image card__image_webp_m" media="(min-width: 704px)" srcset="" type="image/webp">
+      <source class="card__image card__image_webp_s" srcset="" type="image/webp">
+      <source class="card__image card__image_origin_l" media="(min-width: 1056px)" srcset="">
+      <source class="card__image card__image_origin_m" media="(min-width: 704px)" srcset="">
+      <img class="card__image card__image_origin_s" width="112" height="90">
     </picture>
     <cite class="card__author"></cite>
     <button class="action">

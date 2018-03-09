@@ -17,7 +17,7 @@
           var description = origin.querySelector(".card__description");
           description.parentNode.removeChild(description);
         } else if (articleData.description) {
-          var image = origin.querySelector(".card__image");
+          var image = origin.querySelector("picture");
           image.parentNode.removeChild(image);
         };
         break
@@ -32,16 +32,23 @@
     };
 
     var title = origin.querySelector(".card__title");
-    var image = origin.querySelector(".card__image");
+    var image = origin.querySelector("picture");
     var description = origin.querySelector(".card__description");
 
     title.innerHTML = articleData.title;
     title.style.color = articleData.titleColor;
     if (image) {
-      image.setAttribute("src", articleData.image)
+      var src = articleData.image.slice(0, articleData.image.length - 4);
+      var format = articleData.image.slice(articleData.image.length - 4);;
+      image.querySelector(".card__image_origin_s").setAttribute("srcset", src + format);
+      image.querySelector(".card__image_origin_m").setAttribute("srcset", src + "@2x" + format);
+      image.querySelector(".card__image_origin_l").setAttribute("srcset", src + "@3x" + format);
+      image.querySelector(".card__image_webp_s").setAttribute("srcset", src + ".webp");
+      image.querySelector(".card__image_webp_m").setAttribute("srcset", src + "@2x.webp");
+      image.querySelector(".card__image_webp_l").setAttribute("srcset", src + "@3x.webp");
     };
     if (description) {
-      description.innerHTML = articleData.description
+      description.innerHTML = articleData.description;
     };
 
     return origin;
