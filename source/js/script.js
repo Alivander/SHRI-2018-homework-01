@@ -17,7 +17,7 @@
           var description = origin.querySelector(".card__description");
           description.parentNode.removeChild(description);
         } else if (articleData.description) {
-          var image = origin.querySelector("picture");
+          var image = origin.querySelector(".card__picture");
           image.parentNode.removeChild(image);
         };
         break
@@ -32,7 +32,7 @@
     };
 
     var title = origin.querySelector(".card__title");
-    var image = origin.querySelector("picture");
+    var image = origin.querySelector(".card__picture");
     var description = origin.querySelector(".card__description");
 
     title.innerHTML = articleData.title;
