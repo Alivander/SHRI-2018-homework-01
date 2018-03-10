@@ -1,8 +1,8 @@
 {
-  "name": "cat-energy",
-  "version": "13.0.0",
+  "name": "SHRI-2018-Adaptive-Layout",
+  "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Adaptive Layout. Homework for lesson 01 of the SHRI-2018",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.2.x",
