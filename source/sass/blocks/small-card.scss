@@ -55,7 +55,7 @@
     overflow: hidden;
   }
 
-  @media (min-width: $screen-4) {
+  @media (min-width: $screen-3) {
     font-size: 26px;
   }
 }
@@ -70,7 +70,7 @@
   }
 
   @media (min-width: $screen-3) {
-    max-height: 17px * 1.2 * 3;
+    max-height: 26px * 1.2 * 3;
   }
 }
 
