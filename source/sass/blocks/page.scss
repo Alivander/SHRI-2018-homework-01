@@ -1,8 +1,18 @@
 .page {
   margin: 0 auto;
+  padding: 0 20px;
 
-  @media (min-width: 512px) {
-    margin: 0 15.625vw;
+  @media (min-width: $screen-2) {
+    width: $screen-2;
+  }
+
+  @media (min-width: $screen-3) {
+    width: 704px;
+    padding: 0;
+  }
+
+  @media (min-width: $screen-4) {
+    width: 1056px;
   }
 }
 
@@ -12,7 +22,18 @@
 
 .page__container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 16px;
+  grid-template-columns: 1fr;
   grid-row-gap: 30px;
+
+  @media (min-width: $screen-2) {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 8px));
+    grid-column-gap: 16px;
+    grid-auto-flow: dense;
+  }
+
+  @media (min-width: $screen-3) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 16px;
+  }
 }
