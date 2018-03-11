@@ -4,7 +4,7 @@
 
 Яндекс. Школа разработки интерфейсов. 2018 год.
 
-## Ссылка для просмотра сверстанной страницы](https://alivander.github.io/SHRI-2018-homework-01/build/index.html)
+## [Ссылка для просмотра сверстанной страницы](https://alivander.github.io/SHRI-2018-homework-01/build/index.html)
 
 npm i // установка 
 
