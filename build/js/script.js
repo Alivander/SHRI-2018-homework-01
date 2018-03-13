@@ -52,6 +52,7 @@
       var src = articleData.image.slice(0, articleData.image.length - 4);
       var format = articleData.image.slice(articleData.image.length - 4);;
       image.querySelector(".image__origin_s").setAttribute("src", src + format);
+      image.querySelector(".image__origin_s").setAttribute("alt", articleData.title);
       image.querySelector(".image__origin_m").setAttribute("srcset", src + "@2x" + format);
       image.querySelector(".image__origin_l").setAttribute("srcset", src + "@3x" + format);
       image.querySelector(".image__webp_s").setAttribute("srcset", src + ".webp");
