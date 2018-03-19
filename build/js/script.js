@@ -1,9 +1,9 @@
 (function () {
   var templates = document.querySelector("template").content;
-  var cardSmallWithImage = templates.querySelector(".small-card.small-card_content_image");
-  var cardSmallWithText = templates.querySelector(".small-card.small-card_content_text");
-  var cardMiddle = templates.querySelector(".middle-card");
-  var cardLarge = templates.querySelector(".large-card");
+  var cardSmallWithImage = templates.querySelector(".card_size_s.card_content_image");
+  var cardSmallWithText = templates.querySelector(".card_size_s.card_content_text");
+  var cardMiddle = templates.querySelector(".card_size_m");
+  var cardLarge = templates.querySelector(".card_size_l");
   var container = document.querySelector(".page__container");
 
   var documentContent = document.createDocumentFragment();
@@ -18,7 +18,7 @@
         } else if (articleData.description) {
           origin = cardSmallWithText.cloneNode(true);
         };
-        var title = origin.querySelector(".small-card__title");
+        var title = origin.querySelector(".card__title");
         var image = origin.querySelector(".card__picture");
         var description = origin.querySelector(".card__description");
         var author = origin.querySelector(".card__author");
