@@ -52,7 +52,7 @@
   margin-bottom: 10px;
 
   @media (min-width: $screen-3) {
-    max-height: 17px * 1.2 * 3;
+    max-height: 1em * 1.2 * 3;
     overflow: hidden;
   }
 
@@ -62,7 +62,7 @@
 }
 
 .small-card_content_image .small-card__title {
-  max-height: 17px * 1.2 * 4; // font-size * line-height * count string
+  max-height: 1em * 1.2 * 4; // font-size * line-height * count string
   margin-right: 10px;
   overflow: hidden;
 
@@ -71,7 +71,7 @@
   }
 
   @media (min-width: $screen-3) {
-    max-height: 26px * 1.2 * 3;
+    max-height: 1em * 1.2 * 3;
   }
 }
 
@@ -97,7 +97,7 @@
 }
 
 .small-card__description {
-  height: 14px * 1.5 * 3; // font-size * line-height * count string
+  height: 1em * 1.43 * 3; // font-size * line-height * count string
   line-height: 1.43;
   margin-bottom: 10px;
   overflow: hidden;

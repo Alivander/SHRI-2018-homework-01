@@ -83,19 +83,19 @@
 }
 
 .large-card__description {
-  max-height: 14px * 1.5 * 3; // font-size * line-height * count string
+  max-height: 1em * 1.43 * 3; // font-size * line-height * count string
   line-height: 1.43;
   overflow: hidden;
 
   @media (min-width: $screen-3) {
     flex-grow: 1;
     flex-shrink: 1;
-    max-height: 14px * 1.43 * 8;
+    max-height: 1em * 1.43 * 8;
     margin-bottom: auto;
   }
 
   @media (min-width: $screen-4) {
-    max-height: 20px* 1.43 * 9;
+    max-height: 1em * 1.43 * 9;
   }
 }
 
